@@ -1,0 +1,23 @@
+﻿<h3>Fish-Room</h3>
+
+@foreach (var item in AnimalListItems)
+{
+        <div class="card" style="width: 18rem;">
+            <img src="@item.Image" class="card-img-top" alt="@item.NameDutch">
+            <div class="card-body">
+                <h3 class="card-title">@item.NameDutch</h3>
+                <h4 class="card-subtitle">@item.NameFamily</h4>
+                <p></p>
+                <button class="btn btn-warning" @onclick="e => OnReadClick.InvokeAsync(item)">Meer info</button>
+            </div>
+        </div>
+
+}
+
+@code {
+    [Parameter]
+    public AnimalListItem[] AnimalListItems { get; set; }
+
+    [Parameter]
+    public EventCallback<AnimalListItem> OnReadClick { get; set; }
+}

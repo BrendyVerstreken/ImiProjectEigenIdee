@@ -1,0 +1,22 @@
+﻿<h3>Meer info</h3>
+
+<div class="card" style="width: 18rem;">
+    <img src="@Animal.Image" class="card-img-top" alt="@Animal.NameDutch">
+    <div class="card-body">
+        <h2 class="card-title">@Animal.NameDutch</h2>
+        <h3 class="card-subtitle">@Animal.NameFamily</h3>
+        <h4 class="card-info">
+            <dl>
+                <dt>Type: </dt>
+                <dd>@Animal.Types.Value</dd>
+            </dl>
+        </h4>
+    </div>
+</div>
+@code {
+    [Parameter]
+    public AnimalItem Animal { get; set; }
+    [Parameter]
+    public EventCallback OnCancelClick { get; set; }
+
+}

@@ -1,0 +1,49 @@
+﻿@page "/animal"
+@inject ICRUDService<AnimalListItem, AnimalItem> service;
+
+<h3>Animal</h3>
+
+
+<div class="mt-3">
+    @if (!string.IsNullOrEmpty(error))
+    {
+        <div class="alert alert-danger">
+            @error
+        </div>
+    }
+
+    @if (currentAnimal == null)
+    {
+        <AnimalList AnimalListItems="animalListItems"
+                OnReadClick="ReadAnimal">
+
+        </AnimalList>
+    }
+
+
+
+</div>
+
+@code {
+    private AnimalListItem[] animalListItems;
+    private AnimalItem currentAnimal;
+    private string error;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await ShowAnimals();
+    }
+
+    public async Task ShowAnimals()
+    {
+        animalListItems = await service.GetList();
+        this.currentAnimal = null;
+
+    }
+
+    public async Task ReadAnimal(AnimalListItem item)
+    {
+        this.currentAnimal = await service.Get(item.Id);
+    }
+
+}
