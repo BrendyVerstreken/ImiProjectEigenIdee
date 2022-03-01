@@ -40,6 +40,17 @@ namespace Imi.Project.Blazor.Services
             new InputSelectItem() {Value = "4" , Label = "Leeft als koppel"}
         };
 
+        static InputSelectItem[] breedings = new InputSelectItem[]
+{
+            new InputSelectItem() {Value = "1" , Label = "Smijt de eitjes waar het hen uitkomt"},
+            new InputSelectItem() {Value = "2" , Label = "Legt de eitjes in een grot"},
+            new InputSelectItem() {Value = "3" , Label = "Maakt een schuimnest"},
+            new InputSelectItem() {Value = "4" , Label = "Legt de eitjes tegen de want of op een substraat"},
+            new InputSelectItem() {Value = "5" , Label = "Houd de eitjes in hun mond tot ze uitkomen"},
+            new InputSelectItem() {Value = "6" , Label = "Houd de eitjes bij hun tot ze uitkomen"},
+            new InputSelectItem() {Value = "5" , Label = "Levendbarend"}
+};
+
         static List<AnimalItem> items = new List<AnimalItem>
         {
             new AnimalItem()

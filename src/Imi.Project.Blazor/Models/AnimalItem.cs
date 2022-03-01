@@ -16,6 +16,8 @@ namespace Imi.Project.Blazor.Models
         public int ContinentId { get; set; }
         public InputSelectItem Socials { get; set; }
         public int SocialId { get; set; }
+        public InputSelectItem Breedings { get; set; }
+        public int BreedingId { get; set; }
         public decimal minTemp { get; set; }
         public decimal maxTemp { get; set; }
         public decimal minPh { get; set; }
