@@ -5,7 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Animals\" />
+    <Compile Remove="Pages\Animals\**" />
+    <Content Remove="Pages\Animals\**" />
+    <EmbeddedResource Remove="Pages\Animals\**" />
+    <None Remove="Pages\Animals\**" />
   </ItemGroup>
 
 </Project>

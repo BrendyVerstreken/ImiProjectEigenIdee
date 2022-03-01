@@ -75,7 +75,7 @@ namespace Imi.Project.Blazor.Services
                 Id = 1,
                 NameFamily = "Loricariidae",
                 NameDutch = "Ancistruss",
-                Image = new Uri("https://aquainfo.nl/wp-content/uploads/2011/12/Ancistrus-Cf-Cirrhosus.jpg"),
+                Image = new Uri("https://cdn.myonlinestore.eu/93c794e2-6be1-11e9-a722-44a8421b9960/image/cache/full/c2168c65e550dd3c38fcb81c7173b0004588ee52.jpg"),
                 TypeId = 1,
                 DietId = 1,
                 ContinentId = 4,
@@ -101,8 +101,8 @@ namespace Imi.Project.Blazor.Services
 
         public Task<AnimalItem> Get(int id)
         {
-            var animal = items.SingleOrDefault(a => a.Id == id);
-            return Task.FromResult(animal);
+            return Task.FromResult(items.SingleOrDefault(a => a.Id == id));
+
         }
 
         public Task<AnimalListItem[]> GetList()
